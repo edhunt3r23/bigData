@@ -14,7 +14,7 @@ st.set_page_config(page_title="Análisis de Barritas de Proteína", layout="wide
 # CARGA Y LIMPIEZA DE DATOS
 @st.cache_data
 def cargar_datos():
-    df = pd.read_csv("Barritas_Complete.csv", encoding="latin1")
+    df = pd.read_csv("Barritas_Complete (1).csv", encoding="latin1")
     df.drop_duplicates(inplace=True)
     df.dropna(subset=["Price", "Region", "Product"], inplace=True)
     df.fillna("", inplace=True)
